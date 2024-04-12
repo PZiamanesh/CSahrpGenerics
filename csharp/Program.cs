@@ -57,11 +57,11 @@ static void AddOrgnizations(IRepo<Orgnization> orgRepo)
     AddBatch(orgRepo, orgs);
 }
 
-static void AddBatch<T>(IWriteRepo<T> orgRepo, T[] orgs)
+static void AddBatch<T>(IWriteRepo<T> writeRepo, T[] items)
 {
-    foreach (var org in orgs)
+    foreach (var item in items)
     {
-        orgRepo.Add(org);
+        writeRepo.Add(item);
     }
 }
 
