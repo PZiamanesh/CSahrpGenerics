@@ -1,8 +1,2 @@
-
-IWriteRepo<in T>       IReadRepo<out T>
-            ^          ^
-            |          |
-              IRepo<T>
-              ^      ^
-              |      |
-    ListRepo<T>      SqlRepo<T>          
+IRepo<T> : IWriteRepo<in T>, IReadRepo<out T>
+ListRepo<T> and SqlRepo<T> both inherit IRepo<T>
